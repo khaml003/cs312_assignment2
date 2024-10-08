@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Epsilon 3 — Smart Speaker Revolution</title>
+    <title>Epsilon — Smart Speaker Revolution</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,28 +12,34 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#epsilon">Overview</a></li>
+                <li class="dropdown">
+                    <a href="#features" class="dropbtn">Features</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#sound">360° Sound</a></li>
+                        <li><a href="#smart-home">Smart Home Integration</a></li>
+                        <li><a href="#voice-control">Voice Control</a></li>
+                    </ul>
+                </li>
                 <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#support">Support</a></li>
+                <li><a href="#reviews">Reviews</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <h1>Epsilon 3</h1>
+    <!-- Overview Section -->
+    <section id="epsilon">
+        <h1>Epsilon</h1>
         <p>Sound beyond limits.</p>
-        <a href="#overview" class="cta">Learn More</a>
+        <img src="smart_speaker.jpg" alt="Epsilon Speaker">
     </section>
 
     <!-- Sound Section -->
     <section id="sound">
         <div class="content">
             <h2>360° Sound Experience</h2>
-            <p>Immerse yourself in rich, crystal-clear sound that fills the room. The Epsilon 3 delivers an unrivaled audio experience.</p>
-            <img src="speaker_livingroom.jpg" alt="Epsilon 3 in living room">
+            <p>Immerse yourself in rich, crystal-clear sound that fills the room. The Epsilon 3 delivers an unrivaled Dolby Atmos audio experience.</p>
+            <img src="speaker_360_sound.jpg" alt="Epsilon Speaker with 360 sound">
         </div>
     </section>
 
@@ -41,8 +47,8 @@
     <section id="smart-home">
         <div class="content">
             <h2>Control Your Home</h2>
-            <p>Seamlessly integrate with your smart home devices. Epsilon 3 is your command center.</p>
-            <img src="speaker_smart_home.jpg" alt="Epsilon 3 smart home integration">
+            <p>Seamlessly integrate with your smart home devices. Epsilon is your command center.</p>
+            <img src="speaker_smart_home.jpg" alt="Epsilon Speaker smart home integration">
         </div>
     </section>
 
@@ -50,33 +56,18 @@
     <section id="voice-control">
         <div class="content">
             <h2>Just Say the Word</h2>
-            <p>Whether it's Google Assistant or Alexa, Epsilon 3 responds to your voice commands.</p>
-            <img src="speaker_voice_control.jpg" alt="Epsilon 3 voice control">
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery-container">
-            <img src="gallery1.jpg" alt="Epsilon 3 at home">
-            <img src="gallery2.jpg" alt="Epsilon 3 in office">
-            <img src="gallery3.jpg" alt="Epsilon 3 outdoors">
+            <p>Whether it's Google Assistant, Alexa or Siri, Epsilon responds to your voice commands.</p>
+            <img src="speaker_voice_control.jpg" alt="Epsilon voice control">
         </div>
     </section>
 
     <!-- Pricing Section -->
     <section id="pricing">
-        <h2>Choose Your Epsilon 3</h2>
+        <h2>Choose Your Epsilon Speaker</h2>
         <div class="pricing-options">
             <div class="option">
                 <h3>Standard</h3>
                 <p>$199</p>
-                <a href="#" class="buy-now">Buy Now</a>
-            </div>
-            <div class="option">
-                <h3>Pro</h3>
-                <p>$299</p>
                 <a href="#" class="buy-now">Buy Now</a>
             </div>
             <div class="option">
@@ -87,10 +78,40 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Epsilon 3. All Rights Reserved.</p>
-    </footer>
+    <!-- Review Form Section -->
+    <section id="reviews">
+        <h2>Leave a Review</h2>
+        <form action="submit_review.php" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
 
+            <div class="form-group">
+                <label for="rating">Rating:</label>
+                <select id="rating" name="rating" required>
+                    <option value="5">★★★★★</option>
+                    <option value="4">★★★★</option>
+                    <option value="3">★★★</option>
+                    <option value="2">★★</option>
+                    <option value="1">★</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Your review" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Submit Review</button>
+            </div>
+        </form>
+    </section>
 </body>
 </html>

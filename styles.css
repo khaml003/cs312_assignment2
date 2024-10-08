@@ -6,43 +6,59 @@ body {
     background-color: #f9f9f9;
 }
 
+/* Sticky Header */
 header {
     position: sticky;
     top: 0;
     background-color: white;
     padding: 20px;
     border-bottom: 1px solid #ddd;
+    z-index: 1000; /* Ensures the header stays on top */
 }
 
+/* Main Navigation */
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
+    position: relative; /* Important for dropdown positioning */
     margin: 0 15px;
 }
 
+/* Navigation Links */
 nav ul li a {
     text-decoration: none;
     color: #333;
+    padding: 14px 16px;
+    display: block;
 }
 
-#hero {
+nav ul li a:hover {
+    background-color: #111;
+    color: #fff; /* Optional: Add a color change on hover */
+}
+
+/* Epsilon Section */
+#epsilon {
     height: 100vh;
-    background: url('hero_speaker.jpg') no-repeat center center/cover;
+    background: url('epsilon_speaker.jpg') no-repeat center center/cover;
     text-align: center;
-    color: white;
+    color: #333;
     padding: 150px 0;
 }
 
-#hero h1 {
+#epsilon h1 {
     font-size: 4em;
 }
 
+/* Call to Action (CTA) Button */
 .cta {
-    background-color: #0070c9;
+    background-color: #005bb5;
     color: white;
     padding: 15px 30px;
     text-decoration: none;
@@ -50,9 +66,10 @@ nav ul li a {
 }
 
 .cta:hover {
-    background-color: #005bb5;
+    background-color: #004b94;
 }
 
+/* Section Styling */
 section {
     padding: 100px 50px;
     text-align: center;
@@ -71,3 +88,47 @@ section p {
 
 section img {
     max-width: 100%;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown content, initially hidden */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Dropdown menu items */
+.dropdown-content li {
+    float: none;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Display dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change background of dropdown button on hover */
+.dropdown:hover .dropbtn {
+    background-color: #111;
+    color: #fff; /* Optional: Change color of the dropdown button */
+}
