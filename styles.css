@@ -49,7 +49,7 @@ nav ul li a:hover {
     background: url('epsilon_speaker.jpg') no-repeat center center/cover;
     text-align: center;
     color: #333;
-    padding: 150px 0;
+    padding: 0px 0px 400px 0px;
 }
 
 #epsilon h1 {
@@ -130,5 +130,5 @@ section img {
 /* Change background of dropdown button on hover */
 .dropdown:hover .dropbtn {
     background-color: #111;
-    color: #fff; /* Optional: Change color of the dropdown button */
+    color: #fff;
 }
